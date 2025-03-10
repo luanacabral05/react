@@ -23,7 +23,7 @@ export default function Home() {
         Aletatório: {numAleat}
       </button>
       <hr />
-      <button onClick={() => setHide(!hide)}>{hide ? "Show" : "Hide"}</button>
+      <button onClick={() => setHide(!hide)}>{hide ? "Abrir" : "Fechar"}</button>
       <hr />
       {!hide && (
         <>

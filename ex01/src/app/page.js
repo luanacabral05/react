@@ -12,12 +12,22 @@ export default function App() {
     };
 
     return (
-        <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <div 
+            style={{
+                display: "flex", 
+                flexDirection: "column", 
+                justifyContent: "center", 
+                alignItems: "center", 
+                height: "100vh",
+                textAlign: "center"
+            }}
+        >
             <h1>Jogue o Dado</h1>
             <Dado numero={numero} />
             <button 
                 onClick={jogarDado} 
-                style={{ marginTop: "20px", padding: "10px 20px", fontSize: "16px" }}>
+                style={{ marginTop: "20px", padding: "10px 20px", fontSize: "16px" }}
+            >
                 Jogar
             </button>
         </div>

@@ -27,14 +27,11 @@ export default function JogoDeDados() {
 
             if (novoNumero > jogador1) {
                 setPontosJogador2(pontosJogador2 + 1);
-                setResultadoRodada("Jogador 2 ganhou a rodada!");
                 console.log("Jogador 2 ganhou a rodada!");
             } else if (jogador1 > novoNumero) {
                 setPontosJogador1(pontosJogador1 + 1);
-                setResultadoRodada("Jogador 1 ganhou a rodada!");
                 console.log("Jogador 1 ganhou a rodada!");
             } else {
-                setResultadoRodada("Empate na rodada!");
                 console.log("Empate na rodada!");
             }
 
@@ -49,6 +46,7 @@ export default function JogoDeDados() {
             } else {
                 setVencedor("Empate");
             }
+            setResultadoRodada("Fim da Rodada");
         }
     };
 

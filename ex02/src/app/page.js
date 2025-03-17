@@ -25,6 +25,7 @@ export default function JogoDeDados() {
             setJogadorAtual(1);
             console.log(`Jogador 2 rolou: ${novoNumero}`);
 
+            // Determina o vencedor da rodada
             if (novoNumero > jogador1) {
                 setPontosJogador2(pontosJogador2 + 1);
                 console.log("Jogador 2 ganhou a rodada!");
@@ -35,9 +36,11 @@ export default function JogoDeDados() {
                 console.log("Empate na rodada!");
             }
 
+            // Avança para a próxima rodada
             setRodada(rodada + 1);
         }
 
+        // Verifica se o jogo terminou
         if (rodada === 5 && jogador === 2) {
             if (pontosJogador1 > pontosJogador2) {
                 setVencedor("Jogador 1");
@@ -46,7 +49,7 @@ export default function JogoDeDados() {
             } else {
                 setVencedor("Empate");
             }
-            setResultadoRodada("Fim da Rodada");
+            setResultadoRodada("Fim do Jogo");
         }
     };
 
@@ -134,7 +137,7 @@ export default function JogoDeDados() {
             {rodada > 5 && (
                 <div style={{ marginTop: "20px", textAlign: "center" }}>
                     <h2 style={{ fontSize: "2rem", color: "#fff", marginBottom: "10px" }}>
-                        Placar: {pontosJogador1} x {pontosJogador2}
+                        Placar Final: {pontosJogador1} x {pontosJogador2}
                     </h2>
 
                     <h2 style={{ fontSize: "2rem", color: "#fff", marginBottom: "20px" }}>
